@@ -147,7 +147,7 @@ nav .container {
     z-index: 1;
 }
 
-/* Features Grid Layout */
+/* Feature Cards & Asociacion Refactor */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -158,10 +158,76 @@ nav .container {
 .feature-card {
     padding: 2.5rem;
     border-radius: 20px;
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
 }
 
 .feature-card:hover {
     transform: translateY(-5px);
+    border-color: var(--accent-orange);
+    box-shadow: 0 10px 30px rgba(249, 88, 57, 0.1);
+}
+
+.asociacion-text-block {
+    text-align: left;
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+.asociacion-expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.asociacion-expandable.active {
+    max-height: 5000px;
+    /* Large enough for full content */
+    opacity: 1;
+}
+
+.btn-read-more {
+    margin-top: 2rem;
+}
+
+.asociacion-sub-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.asociacion-sub-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.asociacion-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.asociacion-list li {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.asociacion-list li strong {
+    display: block;
+    color: var(--accent-yellow);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .feature-icon {

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia | GalicIAbot.org</title>
+    <meta name="description" content="Explora el contenido multimedia de GalicIA Bot.">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .multimedia-gallery {
+            padding: 8rem 0;
+            background: var(--bg-dark);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-orange);
+            box-shadow: 0 20px 40px rgba(249, 88, 57, 0.3);
+        }
+
+        .gallery-preview {
+            width: 100%;
+            height: 250px;
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover .gallery-preview img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .play-overlay {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="Logos RECORTADOS/Logo GalicIABot recortado-08.png" alt="GalicIAbot" class="logo-icon">
+                <span>GalicIAbot.org</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#asociacion">Asociación</a>
+                <a href="index.html#socios">Socios</a>
+                <a href="index.html#beneficios">Beneficios</a>
+                <a href="index.html#planes">Planes</a>
+                <a href="index.html#demo">Demo</a>
+                <a href="index.html#faq">FAQs</a>
+                <a href="multimedia.html" class="active">Multimedia</a>
+            </div>
+            <a href="index.html#contacto-leads" class="btn btn-primary">Hablemos</a>
+        </div>
+    </nav>
+
+    <section class="multimedia-gallery">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h1 class="section-title">Nuestra <span class="gradient-text">Galería Multimedia</span></h1>
+                <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.6;">
+                    Explora cómo la IA está transformando el futuro empresarial.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Image Item -->
+                <div class="gallery-item">
+                    <div class="gallery-preview">
+                        <img src="IMAGENES WEB/gibot-portada-podcast.png" alt="Podcast sobre IA"
+                            style="object-position: top;">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Podcast</h3>
+                        <p>Escucha nuestras últimas conversaciones sobre el impacto de la IA.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="gallery-item">
+                    <div class="gallery-preview">
+                        <img src="IMAGENES WEB/gibot-blog-portada.png" alt="Blog de tecnología"
+                            style="object-position: center 30%;">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Blog</h3>
+                        <p>Artículos de interés sobre el mundo empresarial y la tecnología.</p>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="gallery-item">
+                    <div class="gallery-preview">
+                        <img src="IMAGENES WEB/gibot-entrevista.png" alt="Entrevistas tecnológicas"
+                            style="object-position: top;">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Entrevistas</h3>
+                        <p>Charlas relajadas entre amigos y colaboradores sobre tecnología y futuro.</p>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="gallery-item">
+                    <div class="gallery-preview">
+                        <img src="IMAGENES WEB/gibot-formacion-portada.png" alt="Formación y aprendizaje"
+                            style="object-position: top;">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Formación</h3>
+                        <p>Próximamente se añadirán webinars y formaciones sobre tecnología.</p>
+                    </div>
+                </div>
+
+                <!-- Image Item -->
+                <div class="gallery-item">
+                    <div class="gallery-preview">
+                        <img src="IMAGENES WEB/gibot-info-portada.png" alt="Fuentes de información"
+                            style="object-position: center 15%;">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Información</h3>
+                        <p>Documentación y recursos clave para empresas relacionado con IA.</p>
+                    </div>
+                </div>
+
+                <!-- News Item -->
+                <div class="gallery-item">
+                    <div class="gallery-preview">
+                        <img src="IMAGENES WEB/gibot-noticias-portada.png" alt="Noticias y Actualidad"
+                            style="object-position: center;">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Noticias</h3>
+                        <p>Mantente al día con las últimas novedades y actualizaciones del ecosistema tecnológico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="Logos RECORTADOS/Logo GalicIABot recortado-08.png" alt="GalicIAbot" class="logo-icon">
+                        <span>GalicIAbot.org</span>
+                    </a>
+                    <p class="footer-phrase">
+                        <span class="gradient-text">Automatizamos</span> atención, ventas y seguimiento con <span
+                            class="gradient-text">Inteligencia Artificial</span>
+                        para que tu empresa responda <span class="gradient-text">24/7</span>, convierta más
+                        oportunidades
+                        y <span class="gradient-text">escale sin aumentar equipo</span>.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/galiciabot?igsh=c2gyc28yYmZtODA0&utm_source=qr"
+                            target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFF">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61582572909108" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFF">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/34602066187" target="_blank" rel="noopener noreferrer"
+                            aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="#FFF">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Columns -->
+                <div class="footer-nav">
+                    <div class="footer-nav-col empresa">
+                        <h4>GalicIA Bot</h4>
+                        <a href="index.html#inicio">Inicio</a>
+                        <a href="index.html#asociacion">Asociación</a>
+                        <a href="index.html#socios">Socios</a>
+                        <a href="index.html#beneficios">Beneficios</a>
+                        <a href="index.html#planes">Planes</a>
+                    </div>
+                    <div class="footer-nav-col servicios">
+                        <h4>Servicios</h4>
+                        <a href="index.html#demo">Demo</a>
+                        <a href="index.html#faq">Preguntas Frecuentes</a>
+                        <a href="index.html#contacto-leads">Contacto</a>
+                        <a href="registro-socios.html">Hazte Socio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-legal-inline">
+                <a href="#" id="avisoLegalBtn">Aviso Legal</a>
+                <span class="separator">|</span>
+                <a href="#" id="privacidadBtn">Privacidad</a>
+                <span class="separator">|</span>
+                <a href="#" id="cookiesBtn">Cookies</a>
+                <span class="separator">|</span>
+                <span>&copy; 2026 GalicIAbot.org - Todos los derechos reservados.</span>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+    <!-- Chat Widget LeadConnector -->
+    <script src="https://beta.leadconnectorhq.com/loader.js"
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="69a6f92fa27e8c9ca73700ef">
+        </script>
+    <!-- Modal Aviso Legal -->
+    <div id="avisoLegalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="gradient-text">Aviso Legal</h2>
+
+            <h3>Datos identificativos</h3>
+            <p>En cumplimiento de lo dispuesto en la Ley 34/2002, de Servicios de la Sociedad de la Información y
+                Comercio Electrónico (LSSI-CE), se informa que el presente sitio web es titularidad de:</p>
+            <ul>
+                <li><strong>Titular:</strong> GalicIA Bot</li>
+                <li><strong>Razón social:</strong> Asociación Galicia Bot</li>
+                <li><strong>NIF/CIF:</strong> G-24898082</li>
+                <li><strong>Domicilio social:</strong> C/ Ortega y Gasset, 33. C.P. 15572 (A Coruña)</li>
+                <li><strong>Correo electrónico:</strong> info@galiciabot.org</li>
+                <li><strong>Teléfono:</strong> +34 602066187</li>
+                <li><strong>Dominio web:</strong> www.galiciabot.org</li>
+            </ul>
+            <p>En adelante, el "Titular".</p>
+
+            <h3>Objeto</h3>
+            <p>El presente Aviso Legal regula el acceso, navegación y uso del sitio web titularidad de GalicIA Bot.<br>
+                El acceso al sitio web atribuye la condición de usuario e implica la aceptación plena y sin reservas de
+                todas las disposiciones incluidas en este Aviso Legal.<br>
+                El Titular se reserva el derecho de modificar en cualquier momento y sin previo aviso la presentación,
+                configuración y contenidos del sitio web, así como las condiciones requeridas para su acceso y
+                utilización.</p>
+
+            <h3>Condiciones de uso</h3>
+            <p>El usuario se compromete a utilizar el sitio web de conformidad con la ley, la buena fe, el orden público
+                y el presente Aviso Legal.<br>
+                El usuario responderá frente al Titular o frente a terceros por cualesquiera daños y perjuicios que
+                pudieran causarse como consecuencia del incumplimiento de dicha obligación.<br>
+                Queda expresamente prohibido:</p>
+            <ul>
+                <li>Realizar un uso ilícito o fraudulento del sitio web.</li>
+                <li>Introducir virus informáticos o realizar actuaciones susceptibles de alterar, dañar o interrumpir
+                    los sistemas informáticos del Titular.</li>
+                <li>Intentar acceder a áreas restringidas del sitio web sin autorización.</li>
+                <li>Reproducir, copiar, distribuir o modificar los contenidos sin autorización expresa del Titular.</li>
+            </ul>
+
+            <h3>Propiedad intelectual e industrial</h3>
+            <p>Todos los contenidos del sitio web, incluyendo a título enunciativo pero no limitativo:</p>
+            <ul>
+                <li>Textos</li>
+                <li>Diseño gráfico</li>
+                <li>Logotipos</li>
+                <li>Iconos</li>
+                <li>Imágenes</li>
+                <li>Software</li>
+                <li>Código fuente</li>
+                <li>Marca y nombre comercial</li>
+            </ul>
+            <p>son titularidad de GalicIA Bot o de terceros que han autorizado su uso, y están protegidos por la
+                normativa de propiedad intelectual e industrial.<br>
+                Queda prohibida la reproducción, distribución o transformación total o parcial de los contenidos sin
+                autorización expresa del Titular.</p>
+
+            <h3>Responsabilidad</h3>
+            <p>El Titular no garantiza la inexistencia de errores en el acceso al sitio web ni en su contenido, aunque
+                adoptará las medidas necesarias para evitarlos y, en su caso, corregirlos.<br>
+                El Titular no será responsable de:</p>
+            <ul>
+                <li>Daños derivados del uso indebido del sitio web.</li>
+                <li>Interrupciones del servicio por causas técnicas.</li>
+                <li>Errores u omisiones en los contenidos.</li>
+                <li>Contenidos enlazados desde terceros.</li>
+            </ul>
+            <p>El usuario es el único responsable del uso que realice del sitio web.</p>
+
+            <h3>Enlaces externos</h3>
+            <p>En caso de que el sitio web contenga enlaces a otros sitios de Internet, el Titular no ejercerá ningún
+                tipo de control sobre dichos sitios ni sus contenidos.<br>
+                En ningún caso el Titular asumirá responsabilidad alguna por los contenidos de enlaces pertenecientes a
+                sitios web de terceros.</p>
+
+            <h3>Protección de datos</h3>
+            <p>El tratamiento de los datos personales se rige por lo dispuesto en la Política de Privacidad, disponible
+                en el correspondiente apartado del sitio web.</p>
+
+            <h3>Uso de cookies</h3>
+            <p>El sitio web utiliza cookies conforme a lo dispuesto en la Política de Cookies, disponible en el apartado
+                correspondiente.</p>
+
+            <h3>Legislación aplicable y jurisdicción</h3>
+            <p>El presente Aviso Legal se rige por la legislación española.<br>
+                Para la resolución de cualquier conflicto que pudiera derivarse del acceso o uso del sitio web, las
+                partes se someten a los juzgados y tribunales del domicilio del Titular, salvo que la normativa de
+                protección de consumidores establezca otro fuero imperativo.</p>
+        </div>
+    </div>
+    <script>
+        // Modal functionality for Aviso Legal
+        const modal = document.getElementById("avisoLegalModal");
+        const btn = document.getElementById("avisoLegalBtn");
+        const span = document.getElementsByClassName("close-modal")[0];
+
+        btn.onclick = function (e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+    <!-- Modal Privacidad -->
+    <div id="privacidadModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-privacidad close-modal">&times;</span>
+            <h2 class="gradient-text">POLÍTICA DE PRIVACIDAD</h2>
+
+            <h3>1. Identificación del responsable</h3>
+            <p>En cumplimiento del Reglamento (UE) 2016/679, General de Protección de Datos (RGPD), y la Ley Orgánica
+                3/2018, de Protección de Datos Personales y garantía de los derechos digitales, se informa de que los
+                datos personales recabados a través del presente sitio web serán tratados por:</p>
+            <ul>
+                <li><strong>Titular:</strong> GalicIA Bot</li>
+                <li><strong>Razón social:</strong> Asociación Galicia Bot</li>
+                <li><strong>NIF/CIF:</strong> G-24898082</li>
+                <li><strong>Domicilio social:</strong> C/ Ortega y Gasset, 33. C.P. 15572 (A Coruña)</li>
+                <li><strong>Correo electrónico de contacto:</strong> info@galiciabot.org</li>
+                <li><strong>Teléfono:</strong> +34 602066187</li>
+            </ul>
+            <p>En adelante, el "Responsable".</p>
+
+            <h3>2. Finalidad del tratamiento</h3>
+            <p>Los datos personales que el usuario facilite serán tratados con las siguientes finalidades:</p>
+            <ul>
+                <li>Atender solicitudes de información realizadas a través de formularios de contacto.</li>
+                <li>Gestionar la solicitud de demostraciones, reuniones o presupuestos.</li>
+                <li>Enviar comunicaciones comerciales relacionadas con los servicios ofrecidos, cuando exista
+                    consentimiento.</li>
+                <li>Gestionar la relación contractual en caso de contratación de servicios.</li>
+                <li>Cumplir obligaciones legales, fiscales y contables.</li>
+                <li>Mejorar la experiencia de navegación y analizar el uso del sitio web.</li>
+            </ul>
+            <p>No se adoptarán decisiones automatizadas con efectos jurídicos para el usuario.</p>
+
+            <h3>3. Base jurídica del tratamiento</h3>
+            <p>El tratamiento de los datos personales se fundamenta en:</p>
+            <ul>
+                <li>El consentimiento del interesado.</li>
+                <li>La aplicación de medidas precontractuales a solicitud del interesado.</li>
+                <li>La ejecución de un contrato.</li>
+                <li>El cumplimiento de obligaciones legales.</li>
+                <li>El interés legítimo del Responsable para el seguimiento comercial y mejora de los servicios.</li>
+            </ul>
+            <p>El usuario podrá retirar su consentimiento en cualquier momento.</p>
+
+            <h3>4. Categorías de datos tratados</h3>
+            <p>Se podrán tratar las siguientes categorías de datos:</p>
+            <ul>
+                <li>Datos identificativos: nombre, apellidos, correo electrónico, teléfono.</li>
+                <li>Datos profesionales: empresa, cargo, sector.</li>
+                <li>Datos comerciales: información relacionada con necesidades o intereses.</li>
+                <li>Datos técnicos: dirección IP, datos de navegación y cookies.</li>
+            </ul>
+            <p>No se solicitan categorías especiales de datos. En caso de que el usuario facilite voluntariamente datos
+                sensibles, estos serán eliminados si no resultan necesarios.</p>
+
+            <h3>5. Conservación de los datos</h3>
+            <p>Los datos se conservarán:</p>
+            <ul>
+                <li>Mientras se mantenga la relación comercial.</li>
+                <li>Mientras no se solicite su supresión.</li>
+                <li>Durante los plazos legalmente exigidos para cumplir obligaciones legales.</li>
+            </ul>
+            <p>Finalizados dichos plazos, los datos serán bloqueados y posteriormente eliminados.</p>
+
+            <h3>6. Destinatarios</h3>
+            <p>Los datos podrán ser comunicados a proveedores que prestan servicios necesarios para la actividad del
+                Responsable, tales como:</p>
+            <ul>
+                <li>Servicios de alojamiento web.</li>
+                <li>Plataformas CRM y automatización.</li>
+                <li>Herramientas de email marketing.</li>
+                <li>Servicios de mensajería empresarial.</li>
+                <li>Asesoría fiscal y contable.</li>
+            </ul>
+            <p>Todos los proveedores actúan como encargados del tratamiento y han suscrito los correspondientes
+                contratos conforme al artículo 28 del RGPD.</p>
+
+            <h3>7. Transferencias internacionales</h3>
+            <p>En caso de utilizar herramientas tecnológicas ubicadas fuera del Espacio Económico Europeo, se
+                garantizará que dichas transferencias se realicen bajo mecanismos legales adecuados, tales como
+                decisiones de adecuación o cláusulas contractuales tipo aprobadas por la Comisión Europea.</p>
+
+            <h3>8. Derechos del usuario</h3>
+            <p>El usuario puede ejercer los siguientes derechos:</p>
+            <ul>
+                <li>Acceso</li>
+                <li>Rectificación</li>
+                <li>Supresión</li>
+                <li>Limitación del tratamiento</li>
+                <li>Oposición</li>
+                <li>Portabilidad</li>
+            </ul>
+            <p>Para ejercerlos, deberá enviar una solicitud a info@galiciabot.org, indicando el derecho que desea
+                ejercer y adjuntando copia de su documento de identidad.<br>
+                Asimismo, puede presentar reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).</p>
+
+            <h3>9. Seguridad</h3>
+            <p>El Responsable aplica medidas técnicas y organizativas adecuadas para garantizar la seguridad,
+                confidencialidad e integridad de los datos personales.</p>
+
+            <h3>10. Modificaciones</h3>
+            <p>La presente Política de Privacidad podrá ser actualizada en cualquier momento para adaptarse a cambios
+                normativos o técnicos.</p>
+        </div>
+    </div>
+    <script>
+        // Modal functionality for Privacidad
+        const modalPrivacidad = document.getElementById("privacidadModal");
+        const btnPrivacidad = document.getElementById("privacidadBtn");
+        const spanPrivacidad = document.getElementsByClassName("close-modal-privacidad")[0];
+
+        btnPrivacidad.onclick = function (e) {
+            e.preventDefault();
+            modalPrivacidad.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+        }
+
+        spanPrivacidad.onclick = function () {
+            modalPrivacidad.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target == modalPrivacidad) {
+                modalPrivacidad.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+    <!-- Modal Cookies -->
+    <div id="cookiesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-cookies close-modal">&times;</span>
+            <h2 class="gradient-text">POLÍTICA DE COOKIES GALICIA BOT</h2>
+            <p>Página web de Asociación Galicia Bot</p>
+
+            <h3>1. ¿Qué son las cookies?</h3>
+            <p>Las cookies son pequeños archivos de texto que se descargan en el dispositivo del usuario al acceder a
+                determinadas páginas web. Permiten, entre otras cosas, que una página web funcione correctamente,
+                recordar preferencias del usuario o recopilar información estadística sobre el uso del sitio.</p>
+
+            <h3>2. Tipos de cookies que puede utilizar esta web</h3>
+            <p>La página web de Asociación Galicia Bot puede utilizar las siguientes categorías de cookies:</p>
+            <ul>
+                <li><strong>a) Cookies técnicas o necesarias:</strong> Son aquellas que permiten la navegación a través
+                    de la web y el uso de las diferentes opciones o servicios que en ella existen. Estas cookies son
+                    necesarias para el correcto funcionamiento del sitio y no requieren el consentimiento del usuario.
+                </li>
+                <li><strong>b) Cookies analíticas:</strong> Son aquellas que permiten realizar el seguimiento y análisis
+                    del comportamiento de los usuarios en la web, con el fin de mejorar su funcionamiento y contenidos.
+                    La información recogida es de carácter estadístico. El uso de este tipo de cookies requiere el
+                    consentimiento previo del usuario.</li>
+            </ul>
+
+            <h3>3. Cookies de terceros</h3>
+            <p>Esta web puede utilizar servicios de terceros que, por cuenta de Asociación Galicia Bot, recopilan
+                información con fines estadísticos o de funcionamiento del sitio. En particular, la web puede utilizar
+                herramientas de análisis web proporcionadas por terceros, como servicios de análisis de tráfico. Los
+                datos recopilados por estas cookies se gestionan conforme a las políticas de privacidad de dichos
+                terceros.</p>
+
+            <h3>4. Gestión y configuración de cookies</h3>
+            <p>Al acceder por primera vez a la página web de Asociación Galicia Bot, el usuario es informado sobre el
+                uso de cookies mediante un aviso o banner.</p>
+            <p>El usuario puede:</p>
+            <ul>
+                <li>Aceptar todas las cookies.</li>
+                <li>Rechazar las cookies no necesarias.</li>
+                <li>Configurar sus preferencias de cookies.</li>
+            </ul>
+            <p>Además, el usuario puede permitir, bloquear o eliminar las cookies instaladas en su dispositivo mediante
+                la configuración de las opciones del navegador utilizado. A continuación, se facilitan enlaces a la
+                información sobre cómo gestionar las cookies en los navegadores más habituales:</p>
+            <ul>
+                <li>Google Chrome</li>
+                <li>Mozilla Firefox</li>
+                <li>Microsoft Edge</li>
+                <li>Safari</li>
+            </ul>
+            <p>(La forma de hacerlo depende del navegador utilizado y de su versión.)</p>
+
+            <h3>5. Desactivación de cookies</h3>
+            <p>La desactivación de algunas cookies puede afectar al correcto funcionamiento de la web o a la
+                disponibilidad de determinados servicios.</p>
+
+            <h3>6. Cambios en la Política de Cookies</h3>
+            <p>La presente Política de Cookies podrá actualizarse en función de cambios normativos o técnicos. Se
+                recomienda al usuario revisar esta política de forma periódica para estar informado sobre el uso que se
+                realiza de las cookies.</p>
+
+            <h3>7. Más información</h3>
+            <p>Para más información sobre el tratamiento de datos personales, el usuario puede consultar la Política de
+                Privacidad de la página web de Asociación Galicia Bot.</p>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality for Cookies
+        const modalCookies = document.getElementById("cookiesModal");
+        const btnCookies = document.getElementById("cookiesBtn");
+        const spanCookies = document.getElementsByClassName("close-modal-cookies")[0];
+
+        btnCookies.onclick = function (e) {
+            e.preventDefault();
+            modalCookies.style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        spanCookies.onclick = function () {
+            modalCookies.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Global click handler for all modals
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target == modalPrivacidad) {
+                modalPrivacidad.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+            if (event.target == modalCookies) {
+                modalCookies.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        });
+    </script>
+</body>
+
+</html>

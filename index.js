@@ -75,4 +75,23 @@ revealElements.forEach(el => {
 });
 
 window.addEventListener('scroll', revealOnScroll);
-revealOnScroll(); // Run once on load
+// Asociación Section "Leer más" functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const readMoreBtn = document.querySelector('.btn-read-more');
+    const expandableContent = document.querySelector('.asociacion-expandable');
+
+    if (readMoreBtn && expandableContent) {
+        readMoreBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            expandableContent.classList.toggle('active');
+
+            if (expandableContent.classList.contains('active')) {
+                readMoreBtn.textContent = 'Leer menos';
+            } else {
+                readMoreBtn.textContent = 'Leer más';
+                // Scroll back to section top when closing
+                document.getElementById('asociacion').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});

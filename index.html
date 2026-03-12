@@ -23,8 +23,10 @@
             <div class="nav-links">
                 <a href="#inicio" class="active"
                     onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Inicio</a>
-                <a href="#porque"
+                <a href="#asociacion"
                     onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Asociación</a>
+                <a href="#socios"
+                    onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Socios</a>
                 <a href="#beneficios"
                     onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Beneficios</a>
                 <a href="#planes"
@@ -32,12 +34,10 @@
                 <a href="#demo"
                     onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Demo</a>
                 <a href="#faq"
-                    onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Preguntas
-                    Frecuentes</a>
-                <a href="#contacto-form"
-                    onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">Contacto</a>
+                    onclick="document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active')); this.classList.add('active');">FAQs</a>
+                <a href="multimedia.html">Multimedia</a>
             </div>
-            <a href="tel:+34602066187" class="btn btn-primary">Agenda tu llamada</a>
+            <a href="#contacto-leads" class="btn btn-primary">Hablemos</a>
         </div>
     </nav>
 
@@ -50,75 +50,196 @@
                     Artificial</span> para que tu empresa responda <span class="gradient-text">24/7</span>, convierta
                 más <span class="gradient-text">oportunidades y escale sin aumentar equipo.</span></p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#contacto-form" class="btn btn-primary">Solicita asesoría</a>
+                <a href="#contacto-leads" class="btn btn-primary">Solicita asesoría</a>
                 <a href="#demo" class="btn btn-outline">Ver demo</a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="porque">
+    <!-- Asociacion Section -->
+    <section id="asociacion">
         <div class="container">
             <div style="text-align: center; max-width: 1100px; margin: 0 auto;">
-                <h2 class="section-title">¿Qué es <span class="gradient-text">GalicIA Bot</span>?</h2>
-                <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.6; margin-bottom: 1.5rem;">Somos
-                    una asociación nacida en <span class="gradient-text">Narón</span> dedicada a impulsar el desarrollo
-                    tecnológico en las empresas,
-                    facilitando acceso a soluciones de <span class="gradient-text">automatización con IA</span> de
-                    última generación.</p>
-                <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.6;">En <span
-                        class="gradient-text">GalicIA Bot</span> trabajamos para <span class="gradient-text">fortalecer
-                        el tejido empresarial local</span> a través de la <span class="gradient-text">innovación
-                        digital</span>.</p>
+                <h2 class="section-title">¿Qué es la <span class="gradient-text">Asociación Galicia Bot</span>?</h2>
+                <div class="asociacion-text-block">
+                    <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Únete a una nueva comunidad de empresas que quieren aprovechar la inteligencia artificial y la
+                        automatización para optimizar procesos, ahorrar costes y ser más eficientes y competitivas.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1.2rem; line-height: 1.6;">
+                        Desde Narón, en A Coruña, la <strong>Asociación Galicia Bot</strong> acompaña a PYMES,
+                        autónomos, nómadas digitales y freelancers en su transformación digital, ayudándoles a aplicar
+                        IA y automatización de forma práctica, cercana y adaptada a la realidad del tejido empresarial.
+                    </p>
+                </div>
+
+                <div class="asociacion-expandable">
+                    <!-- 1. Quiénes somos -->
+                    <div class="asociacion-sub-section">
+                        <h3>Quiénes somos</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; font-style: italic;">
+                            "Nacemos de la necesidad de empresarios reales, como nosotros —<strong>Eloy Taboada, Miguel
+                                Galeiras, Leo Galeiras, Alejandra Villegas e Italo Taquila</strong>—, que pilotamos
+                            PYMES gallegas y sabemos lo que cuesta innovar sin o con pocos recursos. No nos quedamos
+                            atrás en este cambio; te ayudamos a integrar IA y automatización en tus procesos con
+                            sencillez, proximidad y foco en lo que realmente importa para tu negocio y tu vida."
+                        </p>
+                    </div>
+
+                    <!-- 2. Beneficios -->
+                    <div class="asociacion-sub-section">
+                        <h3>Beneficios de ser socio</h3>
+                        <p style="color: var(--text-main); font-weight: 600; margin-bottom: 2rem;">
+                            ¿Qué ganas al ser socio de la Asociación Galicia Bot?
+                        </p>
+                        <ul class="asociacion-list">
+                            <li>
+                                <strong>💡 Innovación y ayudas</strong>
+                                Acceso preferente a información sobre convocatorias, subvenciones y programas de apoyo a
+                                la digitalización e IA en Galicia o España.
+                            </li>
+                            <li>
+                                <strong>🤝 Red de contactos</strong>
+                                Formar parte de una red de empresas, profesionales y socios tecnológicos que comparten
+                                retos, casos de éxito y oportunidades.
+                            </li>
+                            <li>
+                                <strong>📚 Formación práctica</strong>
+                                Talleres, sesiones y recursos sobre IA aplicada a PYMES (automatización, chatbots,
+                                asistentes virtuales, analítica, etc.).
+                            </li>
+                            <li>
+                                <strong>🌟 Visibilidad</strong>
+                                Aparición como “Socio Galicia Bot” en la web y comunicaciones, reforzando tu imagen
+                                innovadora y credibilidad.
+                            </li>
+                            <li>
+                                <strong>🚀 Acompañamiento</strong>
+                                Orientación inicial sobre cómo empezar con la IA, qué automatizar primero y cómo cumplir
+                                con la normativa.
+                            </li>
+                            <li>
+                                <strong>💰 Ventajas económicas</strong>
+                                Descuentos y condiciones preferentes en servicios, proyectos piloto o soluciones de
+                                automatización de socios colaboradores.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-outline btn-read-more">Leer más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socios Section -->
+    <section id="socios">
+        <div class="container">
+            <div style="text-align: center; max-width: 1100px; margin: 0 auto;">
+                <h2 class="section-title">Descubre los tipos de <span class="gradient-text">socios</span></h2>
+
+
             </div>
 
             <div class="features-grid">
+                <!-- Socio Empresa -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="11" width="18" height="10" rx="2" />
-                            <circle cx="12" cy="5" r="2" />
-                            <path d="M12 7v4" />
-                            <line x1="8" y1="16" x2="8" y2="16.01" />
-                            <line x1="16" y1="16" x2="16" y2="16.01" />
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                            <line x1="12" y1="12" x2="12" y2="12.01" />
                         </svg>
                     </div>
-                    <h3>Automatización estratégica</h3>
-                    <p style="margin-top: 1rem;">Analizamos el flujo de tu negocio para implementar soluciones que
-                        realmente impacten en tu facturación y ahorro de tiempo.</p>
+                    <h3>Socio Empresa</h3>
+                    <p style="margin-top: 1rem;">PYMES con equipo y estructura estable que buscan digitalizar
+                        procesos de ventas, administración, producción o atención al cliente con IA y
+                        automatización práctica.</p>
                 </div>
+                <!-- Socio Autónomo -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <h3>Socio Autónomo</h3>
+                    <p style="margin-top: 1rem;">Profesionales y microempresas que buscan apoyo práctico
+                        para automatizar facturación, agendas y marketing, ganando tiempo en su día a
+                        día sin saber por dónde empezar.</p>
+                </div>
+                <!-- Socio Startup / Tecnológico -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
                             <path
-                                d="M9 2v2M12 2v2M15 2v2M9 20v2M12 20v2M15 20v2M20 9h2M20 12h2M20 15h2M2 9h2M2 12h2M2 15h2" />
+                                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
                         </svg>
                     </div>
-                    <h3>Tecnología aplicada a resultados</h3>
-                    <p style="margin-top: 1rem;">Utilizamos los modelos de lenguaje más avanzados y las herramientas de
-                        IA más innovadoras del mercado, entrenados específicamente con la información de tu empresa.</p>
+                    <h3>Socio Startup / Tecnológico</h3>
+                    <p style="margin-top: 1rem;">Empresas tecnológicas del ámbito de IA, automatización,
+                        datos o software que quieren colaborar como partners en proyectos con la
+                        asociación.</p>
                 </div>
+                <!-- Socio Colaborador -->
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m7 8 5 3 5-3-5-3-5 3Z" />
-                            <path d="M7 12l5 3 5-3" />
-                            <path d="M7 16l5 3 5-3" />
-                            <path d="M2 12l10 6 10-6" />
-                            <path d="M12 22l-10-6" />
-                            <path d="M12 22l10-6" />
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                         </svg>
                     </div>
-                    <h3>Escalabilidad sostenible</h3>
-                    <p style="margin-top: 1rem;">Crece sin límites. Nuestros bots pueden atender a mil clientes al mismo
-                        tiempo con la misma calidad que a uno solo.</p>
+                    <h3>Socio Colaborador</h3>
+                    <p style="margin-top: 1rem;">Estudiantes, freelancers, nómadas digitales o
+                        entusiastas de la tecnología que colaboran en charlas, webinars y talleres.
+                        Sin cuota ni obligaciones estrictas.</p>
+                </div>
+                <!-- Socio Institucional -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="22" x2="21" y2="22" />
+                            <line x1="6" y1="18" x2="6" y2="11" />
+                            <line x1="10" y1="18" x2="10" y2="11" />
+                            <line x1="14" y1="18" x2="14" y2="11" />
+                            <line x1="18" y1="18" x2="18" y2="11" />
+                            <polygon points="12 2 20 7 4 7" />
+                        </svg>
+                    </div>
+                    <h3>Socio Institucional</h3>
+                    <p style="margin-top: 1rem;">Ayuntamientos, cámaras de comercio, universidades o
+                        asociaciones que apoyan la misión digitalizadora mediante convenios, proyectos
+                        conjuntos o difusión en eventos.</p>
+                </div>
+                <!-- Socio Honorífico -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="6" />
+                            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                        </svg>
+                    </div>
+                    <h3>Socio Honorífico</h3>
+                    <p style="margin-top: 1rem;">Directivos, expertos en IA o líderes locales de
+                        reconocido prestigio que han contribuido notablemente a la transformación
+                        digital. Nombrados por la Junta y aprobados en asamblea.</p>
                 </div>
             </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="registro-socios.html" class="btn btn-primary">Hazte socio</a>
+            </div>
         </div>
+
     </section>
 
     <!-- Benefits Section -->
@@ -257,7 +378,7 @@
                         <li><span>Venden principalmente por WhatsApp o redes sociales</span></li>
                         <li><span>Pierden seguimiento comercial</span></li>
                         <li><span>Quieren escalar sin contratar más personal</span></li>
-                        <li><span>Son autónomos o Pymes</span></li>
+                        <li><span>Son autónomos o PYMES</span></li>
                         <li><span>Quieren sistematizar su captación</span></li>
                     </ul>
                     <p class="target-footer">Si tu negocio depende de tareas manuales para responder, organizar y hacer
@@ -325,7 +446,7 @@
                         <li>Respuestas automáticas 24/7</li>
                         <li>Mejora inmediata de experiencia del cliente</li>
                     </ul>
-                    <a href="#contacto-form" class="btn btn-primary">Solicita información</a>
+                    <a href="#contacto-leads" class="btn btn-primary">Solicita información</a>
                 </div>
 
                 <!-- 2. Paquete Premium -->
@@ -339,7 +460,7 @@
                         <li>IA para Telegram y SMS</li>
                         <li>Atención multicanal centralizada</li>
                     </ul>
-                    <a href="#contacto-form" class="btn btn-primary">Solicita información</a>
+                    <a href="#contacto-leads" class="btn btn-primary">Solicita información</a>
                 </div>
 
                 <!-- 3. Paquete GiBot Reuniones -->
@@ -358,7 +479,7 @@
                         <li>Definición de próximos pasos</li>
                         <li>CRM avanzado con campos personalizados</li>
                     </ul>
-                    <a href="#contacto" class="btn btn-primary"
+                    <a href="#contacto-leads" class="btn btn-primary"
                         style="background: var(--gradient-purple); color: white;">Solicita información</a>
                 </div>
 
@@ -376,7 +497,7 @@
                         <li>Dashboards de métricas</li>
                         <li>App móvil</li>
                     </ul>
-                    <a href="#contacto-form" class="btn btn-primary">Solicita información</a>
+                    <a href="#contacto-leads" class="btn btn-primary">Solicita información</a>
                 </div>
 
                 <!-- 5. Plan Aceleración Digital -->
@@ -396,7 +517,7 @@
                         <li>Workflows avanzados</li>
                         <li>App móvil avanzada</li>
                     </ul>
-                    <a href="#contacto-form" class="btn btn-primary"
+                    <a href="#contacto-leads" class="btn btn-primary"
                         style="background: var(--gradient-purple); color: white;">Solicita información</a>
                 </div>
 
@@ -413,7 +534,7 @@
                         <li>Calendario editorial</li>
                         <li>Infraestructura digital personalizada</li>
                     </ul>
-                    <a href="#contacto-form" class="btn btn-primary">Solicita información</a>
+                    <a href="#contacto-leads" class="btn btn-primary">Solicita información</a>
                 </div>
             </div>
     </section>
@@ -555,7 +676,7 @@
             </div>
 
             <div class="demo-cta-container">
-                <a href="#contacto-form" class="btn-demo">Agenda tu llamada</a>
+                <a href="#contacto-leads" class="btn-demo">Solicita una cita</a>
             </div>
         </div>
     </section>
@@ -1000,7 +1121,7 @@
             </div>
 
             <div class="cta-table">
-                <a href="#contacto-form" class="btn-table">Solicita asesoría personalizada</a>
+                <a href="#contacto-leads" class="btn-table">Solicita asesoría personalizada</a>
             </div>
         </div>
     </section>
@@ -1235,7 +1356,8 @@
                     <div class="footer-nav-col empresa">
                         <h4>GalicIA Bot</h4>
                         <a href="#inicio">Inicio</a>
-                        <a href="#porque">Asociación</a>
+                        <a href="#asociacion">Asociación</a>
+                        <a href="#socios">Socios</a>
                         <a href="#beneficios">Beneficios</a>
                         <a href="#planes">Planes</a>
                     </div>
@@ -1243,7 +1365,8 @@
                         <h4>Servicios</h4>
                         <a href="#demo">Demo</a>
                         <a href="#faq">Preguntas Frecuentes</a>
-                        <a href="#contacto-form">Contacto</a>
+                        <a href="#contacto-leads">Contacto</a>
+                        <a href="registro-socios.html">Hazte Socio</a>
                     </div>
                 </div>
             </div>
